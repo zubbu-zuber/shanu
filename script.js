@@ -1,20 +1,24 @@
+
 /* 🎵 MUSIC START FIX */
 document.addEventListener("click", function () {
     let music = document.getElementById("bg-music");
-    if (music) music.play();
+    if (music) {
+        music.play();
+        music.volume = 0.7;
+    }
 });
 
-/* PAGE NAVIGATION */
+/* 📄 PAGE NAVIGATION */
 function nextPage(){
 document.getElementById("page1").classList.add("hidden");
 document.getElementById("page2").classList.remove("hidden");
-setTimeout(()=>document.getElementById("candles1").innerHTML="💨",3000);
+candle1();
 }
 
 function showMemories(){
 document.getElementById("page2").classList.add("hidden");
 document.getElementById("page3").classList.remove("hidden");
-setTimeout(()=>document.getElementById("candles2").innerHTML="💨",3000);
+candle2();
 }
 
 function showMessage(){
@@ -27,25 +31,64 @@ document.getElementById("page4").classList.add("hidden");
 document.getElementById("page5").classList.remove("hidden");
 }
 
-function finalReveal(){
-document.querySelector(".box").innerHTML="💥";
+/* 🕯️ CANDLE REAL EFFECT */
+function candle1(){
 setTimeout(()=>{
-document.querySelector(".box").style.display="none";
+let c=document.getElementById("candles1");
+if(c){
+c.style.transform="scale(1.2)";
+c.style.filter="brightness(2)";
+
+setTimeout(()=>{
+c.innerHTML="💨💨💨";
+
+setTimeout(()=>{
+c.innerHTML="🕯️ 🕯️ 🕯️ (Bujh Gayi)";
+c.style.transform="scale(1)";
+c.style.filter="brightness(1)";
+},1000);
+
+},800);
+
+}
+},7000);
+}
+
+function candle2(){
+setTimeout(()=>{
+let c=document.getElementById("candles2");
+if(c){
+c.style.transform="scale(1.2)";
+c.style.filter="brightness(2)";
+
+setTimeout(()=>{
+c.innerHTML="💨💨💨";
+
+setTimeout(()=>{
+c.innerHTML="🕯️ 🕯️ 🕯️ (Bujh Gayi)";
+c.style.transform="scale(1)";
+c.style.filter="brightness(1)";
+},1000);
+
+},800);
+
+}
+},7000);
+}
+
+/* 🎁 FINAL REVEAL */
+function finalReveal(){
+let box = document.querySelector(".box");
+box.innerHTML="💥";
+
+setTimeout(()=>{
+box.style.display="none";
 document.getElementById("finalMessage").classList.remove("hidden");
 heartBurst();
 },800);
 }
 
-/* 📸 SLIDER */
-let images=["1.jpeg","2.jpeg","3.jpeg","4.jpeg","5.jpeg"];
-let i=0;
-setInterval(()=>{
-i=(i+1)%images.length;
-let img=document.getElementById("slider");
-if(img) img.src=images[i];
-},3000);
-
-/* 🎉 HEART BURST */
+/* ❤️ HEART BURST */
 function heartBurst(){
 for(let j=0;j<25;j++){
 let h=document.createElement("div");
@@ -60,7 +103,17 @@ setTimeout(()=>h.remove(),3000);
 }
 }
 
-/* ❤️ FALL ANIMATION */
+/* 📸 SLIDER */
+let images=["1.jpeg","2.jpeg","3.jpeg","4.jpeg","5.jpeg"];
+let i=0;
+
+setInterval(()=>{
+i=(i+1)%images.length;
+let img=document.getElementById("slider");
+if(img) img.src=images[i];
+},3000);
+
+/* ❤️ CONTINUOUS HEART FALL */
 setInterval(()=>{
 let h=document.createElement("div");
 h.innerHTML="❤️";
