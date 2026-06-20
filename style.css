@@ -12,7 +12,6 @@ overflow-x:hidden;
 padding:20px;
 }
 
-/* 📄 Pages */
 .page{
 animation:fadeIn 1s;
 }
@@ -21,13 +20,12 @@ animation:fadeIn 1s;
 display:none;
 }
 
-/* ✨ Fade animation */
 @keyframes fadeIn{
 from{opacity:0;transform:scale(0.9);}
 to{opacity:1;transform:scale(1);}
 }
 
-/* ❤️ Hearts */
+/* Hearts */
 .heart1,.heart3,.heart4{
 font-size:120px;
 cursor:pointer;
@@ -40,18 +38,17 @@ animation:heartbeat 1s infinite;
 100%{transform:scale(1);}
 }
 
-/* 🎂 Cake */
+/* Cake */
 .cake2{
 font-size:160px;
-cursor:pointer;
 animation:heartbeat 1s infinite;
+cursor:pointer;
 }
 
-/* 🕯️ Candles */
+/* Candles */
 .candles1,.candles2{
 font-size:40px;
 animation:glow 1s infinite alternate;
-transition:all 1s ease;
 }
 
 @keyframes glow{
@@ -59,22 +56,21 @@ from{opacity:1;}
 to{opacity:0.4;}
 }
 
-/* 📸 Image slider */
+/* Slider */
 #slider{
 width:300px;
 border-radius:20px;
 border:5px solid white;
-box-shadow:0 0 15px rgba(255,255,255,0.6);
 }
 
-/* 🎁 Surprise box */
+/* Surprise box */
 .box{
 font-size:150px;
 cursor:pointer;
 animation:heartbeat 1s infinite;
 }
 
-/* 🎉 Confetti canvas */
+/* Confetti */
 #confetti{
 position:fixed;
 top:0;
@@ -82,22 +78,10 @@ left:0;
 width:100%;
 height:100%;
 pointer-events:none;
-z-index:999;
 }
 
-/* ❤️ Falling heart animation support */
-@keyframes fall{
-to{
-transform:translateY(100vh);
-opacity:0;
-}
-}
-
-/* 📱 Mobile responsive */
+/* Mobile */
 @media(max-width:768px){
 h1{font-size:26px;}
 #slider{width:90%;}
-.heart1,.heart3,.heart4{font-size:90px;}
-.cake2{font-size:120px;}
-.box{font-size:120px;}
 }
