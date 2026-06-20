@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Shanu ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🎵 Music -->
+<audio id="bg-music" autoplay loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 🎉 Confetti -->
+<canvas id="confetti"></canvas>
+
+<div class="container">
+
+<!-- PAGE 1 -->
+<div id="page1" class="page">
+
+<h1>Meri Jaan Apke Liye Kuch Special Hai 🎁</h1>
+
+<div class="heart1" onclick="nextPage()">❤️</div>
+
+<div class="candles1" id="candles1">🕯️ 🕯️ 🕯️</div>
+
+<h2>Meri Jaan 🕯️ Ko Phook Maro 😮‍💨</h2>
+
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page hidden">
+
+<h1>🎉 Happy Birthday My Love Shanu 😘</h1>
+
+<div class="cake2" onclick="showMemories()">🎂</div>
+
+<div class="candles2" id="candles2">🕯️ 🕯️ 🕯️</div>
+
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page hidden">
+
+<h1>📸 Our Memories ❤️</h1>
+
+<img id="slider" src="1.jpeg">
+
+<div class="heart3" onclick="showMessage()">❤️</div>
+
+</div>
+
+<!-- PAGE 4 -->
+<div id="page4" class="page hidden">
+
+<h2>❤️ Special Message ❤️</h2>
+
+<p>
+Tum meri zindagi ki sabse khoobsurat wajah ho ❤️
+<br><br>
+Happy Birthday Shanu 🎂😘
+<br><br>
+— Zubbu 💖
+</p>
+
+<div class="heart4" onclick="openSurprise()">🎁</div>
+
+</div>
+
+<!-- PAGE 5 -->
+<div id="page5" class="page hidden">
+
+<h1>🎁 Surprise Box 🎁</h1>
+
+<div class="box" onclick="finalReveal()">🎁</div>
+
+<div id="finalMessage" class="hidden">
+<h1>❤️ Happy Birthday Shanu ❤️</h1>
+<p>You are my everything 💖</p>
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
